@@ -2,9 +2,9 @@
     {% set config = element.fieldConfig.elements %}
 
     {% if element.data.children %}
-        <div class="cms-element-{{ element.type }}">
+        <div class="cms-element-{{ element.type }}" style="grid-template-columns: repeat(auto-fill, minmax({{ config.minWidth.value }}, 1fr)); grid-gap: {{ config.gridGap.value }}">
             {% for category in element.data.children %}
-                <div class="category{% if element.config.backgroundFixed.value %} bg-fixed{% endif %}"
+                <div class="category{% if config.backgroundFixed.value %} bg-fixed{% endif %}"
                      style="background-image: url({{ category.media.url }}); min-height: {{ config.height.value }};">
                     <div class="overlay{% if config.boxMaxWidth.value %} container{% endif %}"
                          style="

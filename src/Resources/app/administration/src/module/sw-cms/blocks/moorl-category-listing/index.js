@@ -4,7 +4,7 @@ import './preview';
 Shopware.Service('cmsService').registerCmsBlock({
     name: 'moorl-category-listing',
     label: 'moorl-cms.blocks.general.categoryListing.label',
-    category: 'moorl-cms',
+    category: 'commerce',
     component: 'sw-cms-block-moorl-category-listing',
     previewComponent: 'sw-cms-preview-moorl-category-listing',
     defaultConfig: {

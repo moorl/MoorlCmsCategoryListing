@@ -17,7 +17,7 @@ Component.register('sw-cms-el-moorl-category-listing', {
         categories() {
             if (!this.element.data || !this.element.data.categories) {
                 let categories = [];
-                for (let i = 0; i < 9; i++) {
+                for (let i = 0; i < 6; i++) {
                     categories.push(this.category())
                 }
                 return categories;

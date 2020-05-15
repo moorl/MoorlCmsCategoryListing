@@ -3,6 +3,6 @@ import './index.scss';
 
 const { Component } = Shopware;
 
-Component.register('sw-cms-preview-moorl-category-listing-basic', {
+Component.register('sw-cms-preview-moorl-category-listing', {
     template
 });

@@ -8,7 +8,7 @@ const criteria = new Criteria();
 
 Application.getContainer('service').cmsService.registerCmsElement({
     name: 'moorl-category-listing',
-    label: 'Call to action banner',
+    label: 'Category listing',
     component: 'sw-cms-el-moorl-category-listing',
     configComponent: 'sw-cms-el-config-moorl-category-listing',
     previewComponent: 'sw-cms-el-preview-moorl-category-listing',
