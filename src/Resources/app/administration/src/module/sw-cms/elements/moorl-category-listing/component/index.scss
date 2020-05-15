@@ -1,0 +1,41 @@
+.sw-cms-el-moorl-category-listing {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+
+    .category {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+
+        .overlay {
+            position: relative;
+            min-width: 100%;
+            min-height: 100%;
+            display: flex;
+
+            .container {
+                &.reset {
+                    max-height: 100%;
+                    padding: 0;
+                }
+
+                .container-icon {
+                    float: left;
+                }
+
+                .container-content {
+                    overflow: hidden;
+                    display: block !important;
+                    h3, p {
+                        margin: 0px 0px 15px;
+                    }
+                }
+            }
+        }
+    }
+}

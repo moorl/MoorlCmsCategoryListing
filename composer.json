@@ -1,0 +1,29 @@
+{
+    "name": "moorl/moorl-cms-category-listing",
+    "description": "CMS Element - Category Listing",
+    "version": "1.0.0",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Moorleiche Web Solutions"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "moorl/foundation": "*"
+    },
+    "type": "shopware-platform-plugin",
+    "autoload": {
+        "psr-4": {
+            "MoorlCmsCategoryListing\\": "src/"
+        }
+    },
+    "extra": {
+        "shopware-plugin-class": "MoorlCmsCategoryListing\\MoorlCmsCategoryListing",
+        "copyright": "(c) by Moorleiche Web Solutions",
+        "label": {
+            "de-DE": "CMS Element - Category Listing",
+            "en-GB": "CMS Element - Category Listing"
+        }
+    }
+}
