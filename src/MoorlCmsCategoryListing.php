@@ -2,14 +2,10 @@
 
 namespace MoorlCmsCategoryListing;
 
-use MoorlMerchantPicker\Event\PickAndCollectEvent;
-use MoorlMerchantPicker\Event\PickUpDeliverEvent;
-use Shopware\Core\Content\MailTemplate\MailTemplateActions;
 use MoorlCmsCategoryListing\MoorlPlugin as Plugin;
 use Shopware\Core\Framework\Plugin\Context\InstallContext;
 use Shopware\Core\Framework\Plugin\Context\UninstallContext;
 use Shopware\Core\Framework\Uuid\Uuid;
-use Shopware\Core\System\CustomField\CustomFieldTypes;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
