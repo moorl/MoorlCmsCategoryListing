@@ -3,6 +3,7 @@
 namespace MoorlCmsCategoryListing;
 
 use MoorlCmsCategoryListing\MoorlPlugin as Plugin;
+use MoorlFoundation\Core\PluginFoundation;
 use Shopware\Core\Framework\Plugin\Context\InstallContext;
 use Shopware\Core\Framework\Plugin\Context\UninstallContext;
 use Shopware\Core\Framework\Uuid\Uuid;
@@ -26,9 +27,9 @@ class MoorlCmsCategoryListing extends Plugin
     {
         parent::install($context);
 
-        $this->removeCmsPages([
-            Uuid::fromHexToBytes(md5(self::CMS_PAGE))
-        ]);
+        /* @var $foundation PluginFoundation */
+        $foundation = $this->container->get(PluginFoundation::class);
+        $foundation->setContext($context->getContext());
 
         $data = [
             [
@@ -47,7 +48,7 @@ class MoorlCmsCategoryListing extends Plugin
             ]
         ];
 
-        $this->addCmsPage($data);
+        $foundation->addCmsPages($data);
     }
 
     public function uninstall(UninstallContext $context): void
@@ -58,10 +59,11 @@ class MoorlCmsCategoryListing extends Plugin
             return;
         }
 
-        $this->removeCmsPages([
-            Uuid::fromHexToBytes(md5(self::CMS_PAGE))
-        ]);
+        /* @var $foundation PluginFoundation */
+        $foundation = $this->container->get(PluginFoundation::class);
+        $foundation->setContext($context->getContext());
 
-        $this->removeCmsBlocks($context->getContext(), ['moorl-category-listing']);
+        $foundation->removeCmsPages([self::CMS_PAGE]);
+        $foundation->removeCmsBlocks(['moorl-category-listing']);
     }
 }
