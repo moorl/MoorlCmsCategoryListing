@@ -2,11 +2,10 @@
 
 namespace MoorlCmsCategoryListing;
 
-use MoorlCmsCategoryListing\MoorlPlugin as Plugin;
 use MoorlFoundation\Core\PluginFoundation;
+use Shopware\Core\Framework\Plugin;
 use Shopware\Core\Framework\Plugin\Context\InstallContext;
 use Shopware\Core\Framework\Plugin\Context\UninstallContext;
-use Shopware\Core\Framework\Uuid\Uuid;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
