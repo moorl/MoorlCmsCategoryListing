@@ -1,1 +1,1 @@
-import './moorl-category-listing';
+import './category-listing';

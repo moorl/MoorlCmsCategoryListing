@@ -1,0 +1,9 @@
+{
+    "sw-cms": {
+        "elements": {
+            "category-listing": {
+                "name": "Categories"
+            }
+        }
+    }
+}
