@@ -6,7 +6,10 @@ Component.extend('sw-cms-el-config-category-listing', 'sw-cms-el-config-moorl-fo
         return {
             entity: 'category',
             elementName: 'category-listing',
-            criteria: (new Criteria(1, 12)).addAssociation('media')
+            criteria: (new Criteria(1, 12)).addAssociation('media'),
+            configWhitelist: {
+                listingSource: ['static', 'select']
+            }
         }
     }
 });
