@@ -10,5 +10,18 @@ Shopware.Service('cmsService').registerCmsElement({
     component: 'sw-cms-el-category-listing',
     previewComponent: 'sw-cms-el-preview-category-listing',
     configComponent: 'sw-cms-el-config-category-listing',
-    defaultConfig: {}
+    defaultConfig: {
+        foreignKey: {
+            source: 'static',
+            value: 'category.parentId'
+        },
+        listingLayout: {
+            source: 'static',
+            value: 'slider'
+        },
+        listingHeaderTitle: {
+            source: 'static',
+            value: 'Unterkategorien von {{ category.name }}'
+        },
+    }
 });
