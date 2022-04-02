@@ -22,8 +22,8 @@
         "shopware-plugin-class": "MoorlCmsCategoryListing\\MoorlCmsCategoryListing",
         "copyright": "(c) by moori",
         "label": {
-            "de-DE": "CMS Element - Category Listing",
-            "en-GB": "CMS Element - Category Listing"
+            "de-DE": "CMS Element - Kategorie Listing/Slider",
+            "en-GB": "CMS Element - Category Listing/Slider"
         }
     }
 }
