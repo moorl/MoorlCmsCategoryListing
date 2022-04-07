@@ -7,10 +7,7 @@ use Shopware\Core\Framework\Struct\Struct;
 
 class CategoryListingStruct extends Struct
 {
-    /**
-     * @var EntitySearchResult|null
-     */
-    protected $listing;
+    protected ?EntitySearchResult $listing = null;
 
     public function getListing(): ?EntitySearchResult
     {
