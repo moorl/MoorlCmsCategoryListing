@@ -25,7 +25,6 @@ class CategoryListingCmsElementResolver extends FoundationListingCmsElementResol
         $navigationId = $this->getNavigationId($resolverContext);
 
         $criteria = new Criteria();
-        $criteria->addAssociation('cover');
         $this->enrichCmsElementResolverCriteriaV2(
             $slot,
             $criteria,
