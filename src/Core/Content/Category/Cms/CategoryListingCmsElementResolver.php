@@ -3,6 +3,7 @@
 namespace MoorlCmsCategoryListing\Core\Content\Category\Cms;
 
 use MoorlFoundation\Core\Content\Cms\FoundationListingCmsElementResolver;
+use Shopware\Core\Content\Category\CategoryCollection;
 use Shopware\Core\Content\Cms\Aggregate\CmsSlot\CmsSlotEntity;
 use Shopware\Core\Content\Cms\DataResolver\Element\ElementDataCollection;
 use Shopware\Core\Content\Cms\DataResolver\ResolverContext\ResolverContext;
@@ -34,6 +35,15 @@ class CategoryListingCmsElementResolver extends FoundationListingCmsElementResol
         $listing = $this->listingRoute
             ->load($navigationId, $request, $context, $criteria)
             ->getResult();
+
+        $config = $slot->getFieldConfig();
+        $listingSortingConfig = $config->get('listingSorting');
+
+        if ($listingSortingConfig && !$listingSortingConfig->getValue()) {
+            /** @var CategoryCollection $categories */
+            $categories = $listing->getEntities();
+            $categories->sortByPosition();
+        }
 
         $data->setListing($listing);
     }
