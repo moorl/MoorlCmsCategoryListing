@@ -42,7 +42,9 @@ class CategoryListingCmsElementResolver extends FoundationListingCmsElementResol
         if ($listingSortingConfig && !$listingSortingConfig->getValue()) {
             /** @var CategoryCollection $categories */
             $categories = $listing->getEntities();
-            $categories->sortByPosition();
+            if ($categories->count() > 1) {
+                $categories->sortByPosition();
+            }
         }
 
         $data->setListing($listing);
