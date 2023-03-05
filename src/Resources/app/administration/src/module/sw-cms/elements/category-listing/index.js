@@ -4,7 +4,7 @@ import './preview';
 
 Shopware.Service('cmsService').registerCmsElement({
     plugin: 'MoorlCmsCategoryListing',
-    icon: 'regular-grid',
+    icon: 'regular-view-grid',
     name: 'category-listing',
     label: 'sw-cms.elements.category-listing.name',
     component: 'sw-cms-el-category-listing',
