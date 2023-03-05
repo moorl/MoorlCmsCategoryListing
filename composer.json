@@ -1,7 +1,7 @@
 {
     "name": "moorl/moorl-cms-category-listing",
     "description": "CMS Element - Category Listing",
-    "version": "1.4.2",
+    "version": "1.5.0",
     "license": "proprietary",
     "authors": [
         {
@@ -9,8 +9,8 @@
         }
     ],
     "require": {
-        "shopware/core": "6.4.*",
-        "moorl/foundation": "1.4.*"
+        "shopware/core": "6.5.*",
+        "moorl/foundation": "1.5.*"
     },
     "type": "shopware-platform-plugin",
     "autoload": {
@@ -24,6 +24,18 @@
         "label": {
             "de-DE": "CMS Element - Kategorie Listing/Slider",
             "en-GB": "CMS Element - Category Listing/Slider"
+        },
+        "description": {
+            "de-DE": "CMS Element - Kategorie Listing/Slider",
+            "en-GB": "CMS Element - Category Listing/Slider"
+        },
+        "manufacturerLink": {
+            "de-DE": "https://docs.moori.net/",
+            "en-GB": "https://docs.moori.net/"
+        },
+        "supportLink": {
+            "de-DE": "https://docs.moori.net/",
+            "en-GB": "https://docs.moori.net/"
         }
     }
 }

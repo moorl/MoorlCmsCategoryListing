@@ -39,9 +39,9 @@ class CategoryListing extends EntityListingExtension implements EntityListingInt
     public function isActive(): bool
     {
         if ($this->isSearch()) {
-            return $this->systemConfigService->get('MoorlCmsCategoryListing.config.searchActive') ? true : false;
+            return (bool) $this->systemConfigService->get('MoorlCmsCategoryListing.config.searchActive');
         } elseif ($this->isSuggest()) {
-            return $this->systemConfigService->get('MoorlCmsCategoryListing.config.suggestActive') ? true : false;
+            return (bool) $this->systemConfigService->get('MoorlCmsCategoryListing.config.suggestActive');
         }
 
         return true;
