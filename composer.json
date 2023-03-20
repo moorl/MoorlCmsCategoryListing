@@ -24,6 +24,18 @@
         "label": {
             "de-DE": "CMS Element - Kategorie Listing/Slider",
             "en-GB": "CMS Element - Category Listing/Slider"
+        },
+        "description": {
+            "de-DE": "CMS Element - Kategorie Listing/Slider",
+            "en-GB": "CMS Element - Category Listing/Slider"
+        },
+        "manufacturerLink": {
+            "de-DE": "https://docs.moori.net/",
+            "en-GB": "https://docs.moori.net/"
+        },
+        "supportLink": {
+            "de-DE": "https://docs.moori.net/",
+            "en-GB": "https://docs.moori.net/"
         }
     }
 }
