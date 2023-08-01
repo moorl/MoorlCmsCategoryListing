@@ -5,8 +5,12 @@ namespace MoorlCmsCategoryListing\Core\Content\Category\SalesChannel;
 use MoorlFoundation\Core\System\EntityListingExtension;
 use MoorlFoundation\Core\System\EntityListingInterface;
 use Shopware\Core\Content\Category\CategoryDefinition;
+use Shopware\Core\Content\Category\CategoryException;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Criteria;
+use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\ContainsFilter;
 use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\EqualsFilter;
+use Shopware\Core\Framework\DataAbstractionLayer\Search\Filter\OrFilter;
+use Shopware\Core\System\SalesChannel\SalesChannelContext;
 
 class CategoryListing extends EntityListingExtension implements EntityListingInterface
 {
@@ -62,5 +66,15 @@ class CategoryListing extends EntityListingExtension implements EntityListingInt
     {
         $criteria->addAssociation('media');
         $criteria->addFilter(new EqualsFilter('active', true));
+
+        if (!$this->salesChannelContext) {
+            return;
+        }
+
+        $criteria->addFilter(new OrFilter([
+            new ContainsFilter('path', $this->salesChannelContext->getSalesChannel()->getNavigationCategoryId()),
+            new ContainsFilter('path', $this->salesChannelContext->getSalesChannel()->getServiceCategoryId()),
+            new ContainsFilter('path', $this->salesChannelContext->getSalesChannel()->getNavigationCategoryId())
+        ]));
     }
 }
