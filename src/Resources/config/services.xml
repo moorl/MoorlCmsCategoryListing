@@ -6,7 +6,7 @@
     <services>
         <service id="MoorlCmsCategoryListing\Core\Content\Category\Cms\CategoryListingCmsElementResolver">
             <argument type="service" id="MoorlFoundation\Core\Service\SortingService"/>
-            <argument type="service" id="Shopware\Core\Content\Product\SalesChannel\Listing\ProductListingRoute" />
+            <argument type="service" id="Shopware\Core\Content\Product\SalesChannel\Listing\ProductListingRoute"/>
 
             <tag name="shopware.cms.data_resolver"/>
         </service>
@@ -14,8 +14,8 @@
         <service id="MoorlCmsCategoryListing\Core\Content\Category\SalesChannel\CategoryListing">
             <argument type="service" id="sales_channel.category.repository"/>
 
-            <tag name="moorl.foundation.entity_suggest" priority="0" />
-            <tag name="moorl.foundation.entity_search" priority="0" />
+            <tag name="moorl.foundation.entity_suggest" priority="0"/>
+            <tag name="moorl.foundation.entity_search" priority="0"/>
         </service>
     </services>
 </container>
